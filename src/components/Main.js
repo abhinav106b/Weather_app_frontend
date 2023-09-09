@@ -18,7 +18,7 @@ class Main extends Component{
     render(){
         const onClickRequest=()=>{
             if(this.state.city !== null){
-                axios.post('http://192.168.0.159:3000/weather',{location:this.state.city})
+                axios.post('https://backend-weather-app.onrender.com/weather',{location:this.state.city})
                 .then((response)=>{
                     if(response.status === 200){
                         this.setState({
@@ -37,7 +37,7 @@ class Main extends Component{
                     })
                 });
 
-                axios.post('http://192.168.0.159:3000/fiveDayWeather',{location:this.state.city})
+                axios.post('https://backend-weather-app.onrender.com/fiveDayWeather',{location:this.state.city})
                 .then((response)=>{
                     if(response.status === 200){
                         this.setState({
